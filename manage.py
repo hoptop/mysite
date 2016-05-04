@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 import os
 from app import create_app,db
 from flask.ext.script import Manager, Shell
