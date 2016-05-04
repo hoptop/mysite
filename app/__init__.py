@@ -4,14 +4,14 @@ from flask import Flask, render_template
 from flask.ext.bootstrap import Bootstrap
 # from flask.mail import Mail
 from flask.ext.moment import Moment
-from flask.ext.sqlalchemy import SQLALchemy
+from flask.ext.sqlalchemy import SQLAlchemy
 from config import config
 
 #创建扩展类，此时传入参数
 bootstrap = Bootstrap()
 # mail = Mail()
 moment = Moment()
-db = SQLALchemy()
+db = SQLAlchemy()
 
 #工厂函数
 def create_app(config_name):
