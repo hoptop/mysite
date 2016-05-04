@@ -1,3 +1,48 @@
 {% extends "bootstrap/base.html" %}
 
-{% block doc %}{% endblock %}
+{% block html_attribs %} lang = "zh-CN"{% endblock %}
+{% block styles %}
+{{ super() }}
+
+<link rel="stylesheet" href="{{ url_for('static',filename='css/customer.css') }}">
+
+{% endblock %}
+{% block title %}徐洲更的个人博客{% endblock %}
+{% block body %}
+<div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">主页</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="/home">blog</a></li>
+                  <li class="active"><a href="#">other</a></li>
+                  <li class="active"><a href="#">About me</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">我叫徐洲更</h1>
+            <p class="lead">一个即将就读植物学研究生的技术爱好者，这是我搭建的第一个实验性网站，我将在这里更新各种学习心得</p>
+            <p class="lead">生命不止，折腾不息</p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <a href='http://www.miitbeian.gov.cn/'>浙ICP备16013637号</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+{% endblock %}
