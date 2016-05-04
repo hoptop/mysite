@@ -25,6 +25,9 @@ def create_app(config_name):
     # mail.init_app(app)
     moment.init_app(app)
     db.init_app(app)
+    
     #附加路由和自定义的错误页面
+    from .main import main as main_blueprint #导入蓝本
+    app.register_blueprint(main_blueprint)   #注册蓝本
     
     return app
