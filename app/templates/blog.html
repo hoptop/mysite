@@ -1,8 +1,13 @@
 {% extends 'base.html' %}
 
 {% block page_content %}
+<div class="contianer">
+  <div class="jumbotron">
+    <img src="{{ url_for('static',filename='images/bg.jpg') }}" class="img-thumbnail" alt="background">
+ 
+  </div>
+</div>
 <div class="container">
-
       <div class="blog-header">
         <h1 class="blog-title">The Bootstrap Blog</h1>
         <p class="lead blog-description">The official example template of creating a blog with Bootstrap.</p>
@@ -71,12 +76,13 @@
             <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
           </div><!-- /.blog-post -->
 
-          <nav>
+           <nav>
             <ul class="pager">
-              <li><a href="#">Previous</a></li>
-              <li><a href="#">Next</a></li>
+              <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> Older</a></li>
+              <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
             </ul>
           </nav>
+
 
         </div><!-- /.blog-main -->
 
@@ -113,11 +119,6 @@
         </div><!-- /.blog-sidebar -->
 
       </div><!-- /.row -->
-
     </div><!-- /.container -->
-
-    <footer class="blog-footer">
-        <a href="#">Back to top</a>
-    </footer>
-{% endblock %}
-
+      {% endblock %}
+  

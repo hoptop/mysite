@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="{{ url_for('static',filename='css/blog.css') }}">
 {% endblock %}
 
+{% block body %}
 {% block navbar %}
 <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -54,17 +55,18 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class='jumbotron'>
-    {% block page_content %}{% endblock %}
-    </div>
-</div><!-- /container -->
+    
+{% block page_content %}{% endblock %}
+    
 {% endblock %}
+
 {% block footer %}
 <div class="mastfoot">
 <div class="inner">
     <a href='http://www.miitbeian.gov.cn/'>浙ICP备16013637号</a>
 </div>
 </div>
+{% endblock %}
+
 {% endblock %}
 
